@@ -1,5 +1,106 @@
 <html>
-<title>My Personal Page</title>
-<H1><big><big><big><center>صفحه شخصی خشایار ثقفی</center></big></big></big></H1>
+<head>
+<title>Assignment Name-Text and Color Animator</title>
 
-</html>
+<script>
+	var h=0;//h=div bgcolor
+	var i=0;//i= div background color
+	var j=0;//j=text foreground color
+	
+	function div_bg_Color()
+	{
+			var divtag2=document.getElementById("div2");
+			var background_color=["olive","gold","chocolate","goldenrod","fuchsia","green","orange","deepblue","tomato"];
+			divtag2.style.backgroundColor=background_color[h];
+			h=(h+1)%background_color.length;
+	}
+	setInterval(div_bg_Color,1000);
+	function div_background_Color()
+	{
+			var divtag=document.getElementById("div3");
+			var background_color=["black","rgb(224,224,224)"];
+			divtag.style.backgroundColor=background_color[i];
+			i=(i+1)%background_color.length;
+	}
+	setInterval(div_background_Color,4000);
+	function div_Color()
+	{
+			var divtag1=document.getElementById("div3");
+			var color=["deeppink","cyan","red","blue"];
+			divtag1.style.color=color[j];
+			j=(j+1)%color.length;
+	}
+	setInterval(div_Color,2000);
+</script>
+<style>
+body
+{
+background-color:greenyellow;
+}
+.div1
+{
+border-radius:100px;
+background-color: cornsilk;
+border:5px solid deeppink;
+margin-top:15px;
+margin-bottom:15px;
+margin-left:2px;
+margin-right:2px;
+height:50px;
+width:99%;
+text-align:center;
+font-size:30px;
+font-style:bolder;
+color:darkorange;
+padding:5px;
+}
+#div2
+{
+border-radius:100px;
+background-color: rgb(232,240,200);
+border:15px solid deeppink;
+margin-top:15px;
+margin-bottom:15px;
+margin-left:2px;
+margin-right:2px;
+height:450px;
+width:50%;
+text-align:center;
+font-size:30px;
+font-style:bolder;
+color:tomato;
+padding:5px;
+}
+#div3
+{
+border:10px solid yellowgreen;
+color:violet;
+height:200px;
+margin:10px 10px 10px 10px;
+text-align:center;
+background-color:cornsilk;
+
+
+
+}
+
+</style>
+</head>
+<body>
+<div class="div1">
+<marquee  direction="right" behavior="alternate" scrollamount="15">
+My Personal Page</marquee>
+</div>
+<center>
+<div id="div2">
+<marquee height="400" direction="up" behavior="alternate" scrollamount="3">
+<div id="div3">
+<h1>Name</h1>
+<h2>Description about you</h2>
+</div>
+</marquee>
+</div>
+
+
+</body>
+</HTML>
